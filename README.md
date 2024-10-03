@@ -1,4 +1,4 @@
-Minimalistic Net Worth Calculator
+Minimalistic Net Worth Calculator - https://iamanurag7.github.io/Networth-Calculator/
 A simple web app to calculate your net worth by entering assets and liabilities. No databases, no APIs, just pure HTML, CSS, and JavaScript.
 
 Features
