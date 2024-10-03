@@ -1,0 +1,325 @@
+/* Import Manrope font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Color variables */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    --asset-gradient: linear-gradient(135deg, #00b09b, #96c93d);
+    --liability-gradient: linear-gradient(135deg, #ff416c, #ff4b2b);
+    --background-color: #f3f4f6;
+    --text-color: #333;
+    --input-border: #d1d5db;
+    
+}
+
+/* Base styles */
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    
+    
+}
+.logo{
+    width: 60px;
+    border-radius: 1.8rem;
+    margin-left: 2rem;
+}
+.main-body {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.main-body:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.main-tag {
+    background-image: var(--primary-gradient);
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+}
+.dollar-pop {
+    font-size: 1.5em;
+    color: #FFD700; /* Gold color for a popping effect */
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.dollar-pop:hover {
+    transform: scale(1.2); /* Makes the dollar sign pop on hover */
+    color: #FF4500; /* Change color on hover */
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 700;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.two-tags {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.assets, .liablity {
+    width: 48%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.assets:hover, .liablity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    background-image: var(--asset-gradient);
+    color: #ffffff;
+    padding: 20px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.liablity h2 {
+    background-image: var(--liability-gradient);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--input-border);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background-color: #f9fafb;
+}
+
+
+.add-item {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.add-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: 'Manrope', sans-serif;
+}
+
+input[type="text"] {
+    margin-right: 15px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+}
+
+.total {
+    text-align: center;
+    font-size: 1.8em;
+    margin-top: 30px;
+    padding: 25px;
+    background-image: var(--secondary-gradient);
+    color: #ffffff;
+    border-radius: 12px;
+    animation: pulse 2s infinite;
+    font-weight: 700;
+}
+
+
+#congrats {
+    font-size: 1.2em;
+    color: #4CAF50; /* Default color */
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    display: block;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#congrats.congrats-top-1 {
+    color: #FFD700; /* Gold for top 1% */
+    background-color: #333;
+}
+
+#congrats.congrats-top-10 {
+    color: #00C853; /* Green for top 10% */
+}
+
+#congrats.congrats-below-10lakh {
+    color: #F44336; /* Red for below ₹10 lakh */
+}
+
+.goal-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.goal-section input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.goal-section button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.goal-display {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.goal-display span {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+
+
+.networth-rankings {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.networth-rankings h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.ranking {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.ranking label {
+    font-weight: bold;
+    color: #333;
+}
+
+.ranking span {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.ranking span::before {
+    content: "₹";
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .two-tags {
+        flex-direction: column;
+    }
+    .assets, .liablity {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

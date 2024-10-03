@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networth Calculator </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons/dollar02.png" type="image/png">
+
+</head>
+
+<body class="body">
+    <img class="logo" src="icons/dollar.png">
+
+    <div class="main-body">
+        
+        <div class="main-tag">
+            <h1>Calculate your networth <span class="dollar-pop">$</span></h1>
+
+        </div>
+    </div>
+
+
+    <div class="two-tags">
+        <div class="assets">
+            <div class="assets-holder">
+                <h2>Assets</h2>
+                <div class="assets-section">
+                    <ul class="assets-ul-list">
+                        <li>
+                            <input type="text" id="input-asset_text" placeholder="Stocks (individual shares)">
+                            <input type="number" id="input-asset" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-asset_text" placeholder="Mutual funds">
+                            <input type="number" id="input-asset" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-asset_text" placeholder="Exchange-traded funds (ETFs)">
+                            <input type="number" id="input-asset" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-asset_text"
+                                placeholder="Bonds (government, corporate, municipal)">
+                            <input type="number" id="input-asset" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-asset_text"
+                                placeholder="Real estate investment trusts (REITs)">
+                            <input type="number" id="input-asset" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-asset_text" placeholder="Savings accounts">
+                            <input type="number" id="input-asset" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-asset_text" placeholder="Checking accounts">
+                            <input type="number" id="input-asset" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-asset_text" placeholder="Money market accounts">
+                            <input type="number" id="input-asset" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-asset_text" placeholder="Certificates of deposit (CDs)">
+                            <input type="number" id="input-asset" placeholder="0000">
+                        </li>
+                        <li class="add-item">
+                            <button class="add-button" id="add-asset">+</button>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="liablity">
+            <div class="liablity-holder">
+                <h2>Liablity</h2>
+                <div class="liablity-section">
+                    <ul class="liablity-ul-list">
+                        <li>
+                            <input type="text" id="input-liability_text" placeholder="Mortgage">
+                            <input type="number" id="input-liability" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-liability_text" placeholder="Car loan">
+                            <input type="number" id="input-liability" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-liability_text" placeholder="Student loans">
+                            <input type="number" id="input-liability" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-liability_text" placeholder="Credit card debt">
+                            <input type="number" id="input-liability" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-liability_text" placeholder="Personal loans">
+                            <input type="number" id="input-liability" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-liability_text" placeholder="Home equity loan">
+                            <input type="number" id="input-liability" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-liability_text" placeholder="Medical debt">
+                            <input type="number" id="input-liability" placeholder="0000">
+                        </li>
+                        <li>
+                            <input type="text" id="input-liability_text" placeholder="Other liabilities">
+                            <input type="number" id="input-liability" placeholder="0000">
+                        </li>
+                        <li class="add-item">
+                            <button class="add-button" id="add-liability">+</button>
+                        </li>
+                    </ul>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="total">
+        <label>Total Networth: <span id="total">0</span></label>
+    </div>
+   
+
+    <div class="goal-section">
+        <h2>Set Your Financial Goal</h2>
+        <input type="number" id="goal" placeholder="Enter your financial goal" />
+        <button id="save-goal">Save Goal</button>
+    </div>
+    
+    <div class="goal-display">
+        <label>Your Goal: <span id="saved-goal">No goal set</span></label>
+    </div>
+    <label id="congrats"></label>
+    
+
+    <div class="networth-rankings">
+        <h3>Net Worth Rankings in India</h3>
+        <div class="ranking">
+            <label>Top 1%:</label>
+            <span>₹7 crore+</span>
+        </div>
+        <div class="ranking">
+            <label>Top 10%:</label>
+            <span>₹1 crore+</span>
+        </div>
+        <div class="ranking">
+            <label>Top 25%:</label>
+            <span>₹25 lakh+</span>
+        </div>
+        <div class="ranking">
+            <label>Top 50%:</label>
+            <span>₹15 lakh+</span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Net Worth Calculator. All Rights Reserved.</p>
+    </footer>
+    
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
