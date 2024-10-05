@@ -305,6 +305,25 @@ input[type="text"]:focus, input[type="number"]:focus {
     margin: 0;
 }
 
+.progress-container {
+    width: 100%;
+    background-color: #d0daeb;
+    border-radius: 13px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0;
+    height: 20px;
+    background-color: #2196F3;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    transition: width 0.5s ease-in-out;
+}
+
+
 
 
 @keyframes pulse {
