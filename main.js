@@ -8,6 +8,7 @@ const saveGoalButton = document.getElementById('save-goal');
 const savedGoalDisplay = document.getElementById('saved-goal');
 const addAssetButton = document.getElementById('add-asset');
 const addLiabilityButton = document.getElementById('add-liability');
+const progressBar = document.getElementById('goal-progress');
 
 // Function to create a new item
 function createNewItem(type, label = '', value = '') {
@@ -117,16 +118,24 @@ function updateTotal() {
     const netWorth = totalAssets - totalLiabilities;
     total.textContent = netWorth.toLocaleString();
 
-    // Display congrats message if goal is met
+    // Display congrats message if goal is met and update progress bar
     const goal = Number(localStorage.getItem('savedGoal'));
     if (goal) {
+        const progress = Math.min((netWorth / goal) * 100, 100);
+        progressBar.style.width = `${progress}%`;
+        
         if (netWorth >= goal) {
             congrats.textContent = 'Congratulations! You have achieved your financial goal!';
+            progressBar.style.backgroundColor = '#4CAF50'; // Green color for achieved goal
         } else if (netWorth > goal * 0.75) {
             congrats.textContent = 'You are close to achieving your goal!';
+            progressBar.style.backgroundColor = '#FFA500'; // Orange color for close to goal
         } else {
             congrats.textContent = 'Keep going! You are on your way to achieving your goal.';
+            progressBar.style.backgroundColor = '#2196F3'; // Blue color for in progress
         }
+    } else {
+        progressBar.style.width = '0%';
     }
 }
 
